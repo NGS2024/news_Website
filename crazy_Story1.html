@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title - News Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Article Container */
+        .article-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-meta {
+            color: #666;
+            margin: 1rem 0;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Rating System */
+        .rating-section {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .stars {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .stars i {
+            color: #ddd;
+            transition: color 0.2s;
+        }
+
+        .stars i.active {
+            color: #ffd700;
+        }
+
+        /* Comments Section */
+        .comments-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .comment-form {
+            margin-bottom: 2rem;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .comment-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .comment-form button:hover {
+            background-color: #444;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>News Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Entertainment</a></li>
+        </ul>
+    </nav>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header">
+                <h1>Article Title Goes Here</h1>
+                <div class="article-meta">
+                    <span>By John Doe</span> |
+                    <span>Published: January 1, 2024</span> |
+                    <span>Category: Technology</span>
+                </div>
+            </div>
+
+            <img src="https://via.placeholder.com/800x400" alt="Article Image" class="article-image">
+
+            <div class="article-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <!-- Add more paragraphs as needed -->
+            </div>
+
+            <div class="rating-section">
+                <h3>Rate this Article</h3>
+                <div class="stars">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <p class="rating-message"></p>
+            </div>
+
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <form class="comment-form">
+                    <textarea placeholder="Leave a comment..." required></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+
+                <div class="comments-container">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">Jane Doe</span>
+                            <span class="comment-date">2 hours ago</span>
+                        </div>
+                        <p class="comment-content">This is a great article! Thanks for sharing this information.</p>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">John Smith</span>
+                            <span class="comment-date">5 hours ago</span>
+                        </div>
+                        <p class="comment-content">Very informative! Looking forward to more articles like this.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 News Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Rating System
+        const stars = document.querySelectorAll('.stars i');
+        const ratingMessage = document.querySelector('.rating-message');
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', function() {
+                const rating = this.getAttribute('data-rating');
+                highlightStars(rating);
+            });
+
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingMessage.textContent = `Thank you! You rated this article ${rating} stars.`;
+                // Here you would typically

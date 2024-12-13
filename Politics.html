@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politics - News Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Story of the Day Section */
+        .story-of-day {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-of-day::before {
+            content: "Story of the Day";
+            position: absolute;
+            top: 10px;
+            right: -35px;
+            background-color: #ff4444;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+        }
+
+        .story-of-day img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        /* Politics Articles Grid */
+        .politics-grid {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .main-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .article-list {
+            list-style: none;
+        }
+
+        .article-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+
+        .article-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .article-item a {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .article-item img {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Comments Section */
+        .comments-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .comment-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .comment {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .politics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Deez Nuts News</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://ngs2024.github.io/news_Website/">Home</a></li>
+            <li><a href="politics.html">Politics</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Entertainment</a></li>
+        </ul>
+    </nav>
+
+    <div class="story-of-day">
+        <img src="https://via.placeholder.com/1200x400" alt="Political Story of the Day">
+        <h2>Major Policy Reform Announced in Congress</h2>
+        <p class="meta">By John Smith | March 16, 2024</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <a href="#" style="color: #333;">Read Full Story →</a>
+    </div>
+
+    <div class="politics-grid">
+        <main class="main-content">
+            <h2>Latest Political News</h2>
+            <ul class="article-list">
+                <li class="article-item">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/100x70" alt="Article 1">
+                        <div>
+                            <h3>Senate Debates New Environmental Bill</h3>
+                            <p>Key lawmakers discuss implications of proposed legislation...</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/100x70" alt="Article 2">
+                        <div>
+                            <h3>Local Elections Show Surprising Results</h3>
+                            <p>Unexpected outcomes in several key districts...</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="article-item">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/100x70" alt="Article 3">
+                        <div>
+                            <h3>International Trade Agreement Reached</h3>
+                            <p>Major breakthrough in international relations...</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </main>
+
+        <aside class="comments-section">
+            <h2>Political Discussion</h2>
+            <form class="comment-form">
+                <textarea placeholder="Join the discussion..."></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+            <div class="comments">
+                <div class="comment">
+                     <div class="comment-header">
+                        <span class="comment-author">Jane Doe</span>
+                        <span class="comment-date">2 hours ago</span>
+                    </div>
+                    <p>I think we need to look more carefully at the implications of this new policy reform. There are several aspects that haven't been properly addressed.</p>
+                </div>
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">Robert Johnson</span>
+                        <span class="comment-date">5 hours ago</span>
+                    </div>
+                    <p>The local election results are quite surprising. I wonder how this will affect the upcoming national elections.</p>
+                </div>
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">Maria Garcia</span>
+                        <span class="comment-date">1 day ago</span>
+                    </div>
+                    <p>Great coverage of the international trade agreement. Looking forward to more detailed analysis.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 News Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add comment functionality
+        const commentForm = document.querySelector('.comment-form');
+        const commentsContainer = document.querySelector('.comments');
+
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const commentText = this.querySelector('textarea').value;
+            if (!commentText.trim()) return;
+
+            // Create new comment
+            const newComment = document.createElement('div');
+            newComment.className = 'comment';
+            newComment.innerHTML = `
+                <div class="comment-header">
+                    <span class="comment-author">Guest User</span>
+                    <span class="comment-date">Just now</span>
+                </div>
+                <p>${commentText}</p>
+            `;
+
+            // Add comment to top of comments section
+            commentsContainer.insertBefore(newComment, commentsContainer.firstChild);
+
+            // Clear form
+            this.querySelector('textarea').value = '';
+        });
+    </script>
+</body>
+</html>
